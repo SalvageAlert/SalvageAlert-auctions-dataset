@@ -4,7 +4,7 @@
 
 A free daily sample of the salvage-auction catalogue [SalvageAlert](https://salvagealert.com/?utm_source=github&utm_medium=dataset_readme) records: every lot that sold or was scheduled to sell on Copart USA, Copart Canada, IAA USA and IAA Canada, with its vehicle, condition, title, sale date and yard. One schema across all four auctions, so a Copart row and an IAA row join without mapping two feeds.
 
-[![Records](https://img.shields.io/badge/records-154%2C516-ea580c?style=for-the-badge)](https://salvagealert.com/datasets?utm_source=github&utm_medium=dataset_readme)
+[![Records](https://img.shields.io/badge/records-1%2C561%2C696-ea580c?style=for-the-badge)](https://salvagealert.com/datasets?utm_source=github&utm_medium=dataset_readme)
 [![Sources](https://img.shields.io/badge/sources-Copart%20%C2%B7%20IAA%20%C2%B7%20US%20%C2%B7%20CA-0b1a33?style=for-the-badge)](#coverage)
 [![Updated](https://img.shields.io/badge/updated-2026-10-24-22c55e?style=for-the-badge)](data/)
 [![Licence](https://img.shields.io/badge/sample-CC%20BY--NC%204.0-64748b?style=for-the-badge)](LICENSE)
@@ -37,7 +37,7 @@ schema/fields.json               the schema, machine-readable
 ```
 
 - **Updated daily** with the previous day's sales; the last **30 days** are kept here.
-- **Today's files:** Copart USA 1,000 · Copart Canada 0 · IAA USA 0 · IAA Canada 0 rows (1,000 in all).
+- **Today's files:** Copart USA 1,000 · Copart Canada 17 · IAA USA 1,000 · IAA Canada 19 rows (2,036 in all).
 - Fields marked 🔒 read `[PREMIUM]` in this sample — the full VIN, prices, seller and links. Every [paid file](https://salvagealert.com/datasets?utm_source=github&utm_medium=dataset_readme) carries them.
 - Every row links to its lot on SalvageAlert (`salvageAlertUrl`): photos, the sale history of the VIN and the bids.
 
@@ -48,11 +48,11 @@ What SalvageAlert holds today, all of which is available in the [full dataset](h
 
 | Auction | `source` | Lots | Sold or ended | Full VIN | Recorded since | Days in this repo |
 |---|---|---:|---:|---:|---|---:|
-| Copart USA | `copart_us` | 144,443 | 70,271 | 143,440 | 2026-08-16 | 1 |
-| Copart Canada | `copart_ca` | 3,673 | 2,123 | 3,647 | 2026-08-16 | 0 |
-| IAA USA | `iaai_us` | 3,200 | 779 | 0 | 2026-10-01 | 0 |
-| IAA Canada | `iaai_ca` | 3,200 | 3,195 | 161 | 2026-09-28 | 0 |
-| **All** | | **154,516** | **76,368** | **147,248** | | |
+| Copart USA | `copart_us` | 766,767 | 627,183 | 762,560 | 2026-05-30 | 1 |
+| Copart Canada | `copart_ca` | 20,548 | 17,439 | 20,363 | 2026-08-15 | 1 |
+| IAA USA | `iaai_us` | 647,339 | 475,999 | 0 | 2026-06-04 | 1 |
+| IAA Canada | `iaai_ca` | 127,042 | 122,061 | 111,958 | 2026-05-27 | 1 |
+| **All** | | **1,561,696** | **1,242,682** | **894,881** | | |
 
 Fields
 ------
@@ -135,50 +135,52 @@ LIMIT 20;
 What the sample shows
 ---------------------
 
-From today's 1,000 rows:
+From today's 2,036 rows:
 
 **Top makes**
 
 ```
-FORD                   ████████████████████████ 121
-TOYOTA                 █████████████████████ 108
-CHEVROLET              ████████████████████ 99
-NISSAN                 ████████████████ 82
-HONDA                  ██████████████ 71
-HYUNDAI                ███████████ 57
-KIA                    ██████████ 52
-DODGE                  ████████ 38
+TOYOTA                 ████████████████████████ 186
+BMW                    ████████████████████ 155
+CHEVROLET              ████████████████████ 152
+HONDA                  █████████████████ 132
+FORD                   ████████████████ 124
+HYUNDAI                █████████████ 102
+SUBARU                 █████████████ 99
+AUDI                   ██████████ 75
 ```
 
 **Primary damage**
 
 ```
-FRONT END              ████████████████████████ 527
-SIDE                   ███████ 147
-REAR END               ██████ 129
-HAIL                   █ 28
-BURN                   █ 26
-ALL OVER               █ 21
-ROLLOVER               █ 21
-MINOR DENT/SCRATCHES   █ 18
+FRONT END              ████████████████████████ 525
+Front End              ████████████████ 348
+REAR END               ████████ 184
+SIDE                   ███████ 160
+Left Side              █████ 99
+Rear                   ████ 86
+Right Side             ████ 77
+Left Front             ███ 63
 ```
 
 **Title**
 
 ```
-Salvage                ████████████████████████ 861
-None                   ███ 97
-PartsOnly              █ 29
-Rebuilt                █ 12
+Salvage                ████████████████████████ 1570
+Clear                  █ 94
+PartsOnly              █ 63
+None                   █ 42
+Non-Repairable         █ 20
+Bill Of Sale           █ 14
+Repairable             █ 10
+Rebuilt                █ 6
 ```
 
 **Seller type**
 
 ```
-insurance              ████████████████████████ 300
-rental                 █ 2
-dealer                 █ 1
-finance                █ 1
+insurance              ████████████████████████ 394
+rental                 █ 3
 ```
 
 
@@ -193,7 +195,7 @@ Use cases
 Full dataset
 ------------
 
-The whole catalogue — 154,516 lots and growing — with every field unmasked, filtered to what you need:
+The whole catalogue — 1,561,696 lots and growing — with every field unmasked, filtered to what you need:
 
 1. Open **[salvagealert.com/datasets](https://salvagealert.com/datasets?utm_source=github&utm_medium=dataset_readme)** and pick the auctions, the period, makes, years and status.
 2. See the row count and the price as you go; download a **free 100-row preview** of exactly that selection.
