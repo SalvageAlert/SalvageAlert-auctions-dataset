@@ -235,7 +235,7 @@ The sample in this repository is free for research and non-commercial use under 
   title  = {SalvageAlert salvage auction dataset: Copart and IAA, US and Canada},
   author = {SalvageAlert},
   year   = {2026},
-  url    = {https://github.com/SalvageAlert/salvage-auction-dataset}
+  url    = {https://github.com/SalvageAlert/SalvageAlert-auctions-dataset}
 }
 ```
 

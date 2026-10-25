@@ -1,5 +1,5 @@
 {
-  "name": "salvagealert-salvage-auction-dataset",
+  "name": "salvagealert-auctions-dataset",
   "sources": [
     "copart_us",
     "copart_ca",
