@@ -1,0 +1,294 @@
+{
+  "name": "salvagealert-salvage-auction-dataset",
+  "sources": [
+    "copart_us",
+    "copart_ca",
+    "iaai_us",
+    "iaai_ca"
+  ],
+  "premiumPlaceholder": "[PREMIUM]",
+  "fields": [
+    {
+      "name": "recordId",
+      "type": "string",
+      "premium": false,
+      "description": "Stable id of the lot across files: `<source>:<lotNumber>`."
+    },
+    {
+      "name": "source",
+      "type": "string",
+      "premium": false,
+      "description": "copart_us, copart_ca, iaai_us or iaai_ca."
+    },
+    {
+      "name": "auction",
+      "type": "string",
+      "premium": false,
+      "description": "Copart or IAA."
+    },
+    {
+      "name": "country",
+      "type": "string",
+      "premium": false,
+      "description": "US or CA."
+    },
+    {
+      "name": "lotNumber",
+      "type": "string",
+      "premium": false,
+      "description": "The auction's lot (Copart) or stock (IAA) number."
+    },
+    {
+      "name": "vin",
+      "type": "string",
+      "premium": true,
+      "description": "The full 17-character VIN when we hold it unmasked, otherwise the masked VIN the auction published. The free sample shows the first 11 characters (make, model, year, plant) and masks the serial."
+    },
+    {
+      "name": "vinIsFull",
+      "type": "boolean",
+      "premium": false,
+      "description": "Whether `vin` is the full, unmasked VIN."
+    },
+    {
+      "name": "year",
+      "type": "integer",
+      "premium": false,
+      "description": "Model year."
+    },
+    {
+      "name": "make",
+      "type": "string",
+      "premium": false,
+      "description": "Make, as the auction spells it."
+    },
+    {
+      "name": "model",
+      "type": "string",
+      "premium": false,
+      "description": "Model."
+    },
+    {
+      "name": "trim",
+      "type": "string",
+      "premium": false,
+      "description": "Trim level, when published."
+    },
+    {
+      "name": "bodyStyle",
+      "type": "string",
+      "premium": false,
+      "description": "Body style."
+    },
+    {
+      "name": "vehicleType",
+      "type": "string",
+      "premium": false,
+      "description": "Vehicle type code or name."
+    },
+    {
+      "name": "color",
+      "type": "string",
+      "premium": false,
+      "description": "Exterior colour."
+    },
+    {
+      "name": "engine",
+      "type": "string",
+      "premium": false,
+      "description": "Engine description."
+    },
+    {
+      "name": "cylinders",
+      "type": "integer",
+      "premium": false,
+      "description": "Cylinder count."
+    },
+    {
+      "name": "transmission",
+      "type": "string",
+      "premium": false,
+      "description": "Transmission."
+    },
+    {
+      "name": "fuelType",
+      "type": "string",
+      "premium": false,
+      "description": "Fuel type."
+    },
+    {
+      "name": "driveTrain",
+      "type": "string",
+      "premium": false,
+      "description": "Drive train."
+    },
+    {
+      "name": "odometer",
+      "type": "number",
+      "premium": false,
+      "description": "Odometer reading."
+    },
+    {
+      "name": "odometerUnit",
+      "type": "string",
+      "premium": false,
+      "description": "mi or km."
+    },
+    {
+      "name": "odometerBrand",
+      "type": "string",
+      "premium": false,
+      "description": "Actual, not actual, exempt… as the auction states it."
+    },
+    {
+      "name": "primaryDamage",
+      "type": "string",
+      "premium": false,
+      "description": "Primary damage."
+    },
+    {
+      "name": "secondaryDamage",
+      "type": "string",
+      "premium": false,
+      "description": "Secondary damage."
+    },
+    {
+      "name": "lossType",
+      "type": "string",
+      "premium": false,
+      "description": "Loss type (collision, water, theft…), when published."
+    },
+    {
+      "name": "titleType",
+      "type": "string",
+      "premium": false,
+      "description": "Title or sale document, as published."
+    },
+    {
+      "name": "titleState",
+      "type": "string",
+      "premium": false,
+      "description": "State or province issuing the title."
+    },
+    {
+      "name": "hasKeys",
+      "type": "boolean",
+      "premium": false,
+      "description": "Keys present."
+    },
+    {
+      "name": "runsDrives",
+      "type": "boolean",
+      "premium": false,
+      "description": "Verified run & drive at the yard."
+    },
+    {
+      "name": "engineStarts",
+      "type": "boolean",
+      "premium": false,
+      "description": "Engine verified to start."
+    },
+    {
+      "name": "saleDate",
+      "type": "datetime",
+      "premium": false,
+      "description": "Scheduled or past sale date, UTC."
+    },
+    {
+      "name": "saleStatus",
+      "type": "string",
+      "premium": false,
+      "description": "`ended`, `upcoming` or `unscheduled` when the file was written."
+    },
+    {
+      "name": "lastBid",
+      "type": "number",
+      "premium": true,
+      "description": "Highest bid we recorded; on an ended lot, the last bid before the sale."
+    },
+    {
+      "name": "buyNowPrice",
+      "type": "number",
+      "premium": true,
+      "description": "Buy Now price, when offered."
+    },
+    {
+      "name": "estRetailValue",
+      "type": "number",
+      "premium": true,
+      "description": "The auction's estimated retail (pre-loss) value."
+    },
+    {
+      "name": "repairEstimate",
+      "type": "number",
+      "premium": true,
+      "description": "The auction's repair-cost estimate."
+    },
+    {
+      "name": "currency",
+      "type": "string",
+      "premium": false,
+      "description": "USD or CAD — the currency of every price in the row."
+    },
+    {
+      "name": "sellerName",
+      "type": "string",
+      "premium": true,
+      "description": "Seller (insurer, lender, fleet…), when published."
+    },
+    {
+      "name": "sellerType",
+      "type": "string",
+      "premium": false,
+      "description": "insurance, dealer, rental, finance, government, charity or other."
+    },
+    {
+      "name": "yard",
+      "type": "string",
+      "premium": false,
+      "description": "Selling yard or branch."
+    },
+    {
+      "name": "yardState",
+      "type": "string",
+      "premium": false,
+      "description": "Two-letter state or province of the yard."
+    },
+    {
+      "name": "yardZip",
+      "type": "string",
+      "premium": false,
+      "description": "Postal code of the yard, when published."
+    },
+    {
+      "name": "imageUrl",
+      "type": "string",
+      "premium": true,
+      "description": "Lead photo URL."
+    },
+    {
+      "name": "listingUrl",
+      "type": "string",
+      "premium": true,
+      "description": "The listing on the auction's own site."
+    },
+    {
+      "name": "salvageAlertUrl",
+      "type": "string",
+      "premium": false,
+      "description": "The lot on SalvageAlert: photos, sale history and the VIN record."
+    },
+    {
+      "name": "firstSeenAt",
+      "type": "datetime",
+      "premium": false,
+      "description": "When SalvageAlert first recorded the lot, UTC."
+    },
+    {
+      "name": "lastSeenAt",
+      "type": "datetime",
+      "premium": false,
+      "description": "When SalvageAlert last refreshed the lot, UTC."
+    }
+  ]
+}
