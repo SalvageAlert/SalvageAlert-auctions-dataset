@@ -13,10 +13,10 @@ across four auctions. A fresh slice lands here every day; the full 3.92M-lot his
 
 <br>
 
-[![records](https://img.shields.io/badge/records-3%2C915%2C596-ea580c?style=for-the-badge)](https://salvagealert.com/datasets?utm_source=github&utm_medium=dataset_readme)
+[![records](https://img.shields.io/badge/records-3%2C920%2C010-ea580c?style=for-the-badge)](https://salvagealert.com/datasets?utm_source=github&utm_medium=dataset_readme)
 [![auctions](https://img.shields.io/badge/auctions-Copart%20%C2%B7%20IAA%20%C2%B7%20US%20%C2%B7%20CA-0b1a33?style=for-the-badge)](#-coverage)
 [![fields](https://img.shields.io/badge/fields-47-2563eb?style=for-the-badge)](#-fields)
-[![updated](https://img.shields.io/badge/updated-2026--11--07-22c55e?style=for-the-badge)](data)
+[![updated](https://img.shields.io/badge/updated-2026--11--08-22c55e?style=for-the-badge)](data)
 [![sample](https://img.shields.io/badge/sample-CC%20BY--NC%204.0-64748b?style=for-the-badge)](LICENSE)
 
 <br>
@@ -61,13 +61,13 @@ Copart USA, Copart Canada, IAA USA and IAA Canada in the same 47 columns. A Copa
 <td width="33%" valign="top">
 
 ### Outcomes, not just listings
-**3,615,552** lots that already sold or ended, with the last bid, the retail value and the repair estimate the auction published.
+**3,618,729** lots that already sold or ended, with the last bid, the retail value and the repair estimate the auction published.
 
 </td>
 <td width="33%" valign="top">
 
 ### Full VINs
-**3,149,416** lots carry the complete, unmasked VIN — the key to joining history, recalls and your own records.
+**3,149,509** lots carry the complete, unmasked VIN — the key to joining history, recalls and your own records.
 
 </td>
 </tr>
@@ -100,8 +100,8 @@ From **$0.50 per 1,000 rows**, cheaper as the file grows, paid once. A free 100-
 **1. Grab a day straight from GitHub**
 
 ```bash
-curl -O https://raw.githubusercontent.com/SalvageAlert/SalvageAlert-auctions-dataset/main/data/copart_us/2026-11-07.csv
-curl -O https://raw.githubusercontent.com/SalvageAlert/SalvageAlert-auctions-dataset/main/data/iaai_us/2026-11-07.csv
+curl -O https://raw.githubusercontent.com/SalvageAlert/SalvageAlert-auctions-dataset/main/data/copart_us/2026-11-08.csv
+curl -O https://raw.githubusercontent.com/SalvageAlert/SalvageAlert-auctions-dataset/main/data/iaai_us/2026-11-08.csv
 ```
 
 **2. Load everything in this repository**
@@ -131,13 +131,13 @@ What SalvageAlert holds today — every row of it available in the [full dataset
 
 | Auction | `source` | Lots | Sold or ended | Full VIN | Recorded since | Days here |
 |---|---|---:|---:|---:|---|---:|
-| Copart USA | `copart_us` | 2,955,684 | 2,814,725 | 2,943,902 | 2025-11-21 | 14 |
-| Copart Canada | `copart_ca` | 78,417 | 75,493 | 78,011 | 2025-11-21 | 12 |
-| IAA USA | `iaai_us` | 739,112 | 588,596 | 0 | 2026-06-04 | 14 |
-| IAA Canada | `iaai_ca` | 142,383 | 136,738 | 127,503 | 2026-05-27 | 14 |
-| **All four** | | **3,915,596** | **3,615,552** | **3,149,416** | | |
+| Copart USA | `copart_us` | 2,955,713 | 2,814,814 | 2,943,931 | 2025-11-21 | 15 |
+| Copart Canada | `copart_ca` | 78,465 | 75,490 | 78,059 | 2025-11-21 | 12 |
+| IAA USA | `iaai_us` | 743,438 | 591,690 | 0 | 2026-06-04 | 15 |
+| IAA Canada | `iaai_ca` | 142,394 | 136,735 | 127,519 | 2026-05-27 | 15 |
+| **All four** | | **3,920,010** | **3,618,729** | **3,149,509** | | |
 
-<sub>IAA USA publishes masked VINs only; Copart publishes them in full. Counts are as of 2026-11-07.</sub>
+<sub>IAA USA publishes masked VINs only; Copart publishes them in full. Counts are as of 2026-11-08.</sub>
 
 <br>
 
@@ -145,14 +145,14 @@ What SalvageAlert holds today — every row of it available in the [full dataset
 
 ```
 data/
-├── copart_us/2026-11-07.csv    one file per auction per day:
-├── copart_ca/2026-11-07.csv    the lots whose sale fell on that day,
-├── iaai_us/2026-11-07.csv      up to 1,000 rows each
-└── iaai_ca/2026-11-07.csv
+├── copart_us/2026-11-08.csv    one file per auction per day:
+├── copart_ca/2026-11-08.csv    the lots whose sale fell on that day,
+├── iaai_us/2026-11-08.csv      up to 1,000 rows each
+└── iaai_ca/2026-11-08.csv
 schema/fields.json          the schema, machine-readable
 ```
 
-- **Today:** Copart USA **1,000** · Copart Canada **134** · IAA USA **1,000** · IAA Canada **5** — 2,139 rows.
+- **Today:** Copart USA **355** · Copart Canada **0** · IAA USA **1,000** · IAA Canada **2** — 1,357 rows.
 - **Retention:** the last 30 days. Older days live on in the [full dataset](https://salvagealert.com/datasets?utm_source=github&utm_medium=dataset_readme).
 - **Masking:** fields marked 🔒 read `[PREMIUM]`; the VIN keeps its first 11 characters (maker, model, year, plant) and masks the serial. Every paid file carries all of them.
 
@@ -230,14 +230,14 @@ schema/fields.json          the schema, machine-readable
 **Top makes**
 
 ```
-HYUNDAI                ████████████████████████ 520
-NISSAN                 ████████████████ 339
-TOYOTA                 ███████ 147
-FORD                   ██████ 128
-INFINITI               ██████ 128
-CHEVROLET              █████ 118
-HONDA                  ████ 86
-VOLKSWAGEN             ████ 84
+BMW                    ████████████████████████ 434
+PORSCHE                ███████████████████████ 413
+TOYOTA                 ██████████ 185
+TESLA                  ████ 76
+GMC                    ██ 35
+CHEVROLET              ██ 30
+HYUNDAI                █ 27
+FORD                   █ 20
 ```
 
 </td>
@@ -246,14 +246,14 @@ VOLKSWAGEN             ████ 84
 **Primary damage**
 
 ```
-FRONT END              ████████████████████████ 955
-REAR END               ████ 163
-SIDE                   ████ 150
-REAR                   ███ 110
-LEFT SIDE              ██ 78
-RIGHT FRONT            ██ 63
-LEFT FRONT             ██ 62
-RIGHT SIDE             ██ 60
+FRONT END              ████████████████████████ 544
+REAR                   ████ 87
+RIGHT SIDE             ███ 77
+LEFT SIDE              ███ 62
+NORMAL WEAR & TEAR     ███ 60
+LEFT FRONT             ███ 58
+RIGHT FRONT            ██ 55
+REAR END               ██ 51
 ```
 
 </td>
@@ -264,12 +264,13 @@ RIGHT SIDE             ██ 60
 **Title**
 
 ```
-SALVAGE                ████████████████████████ 1214
-PARTSONLY              █ 54
-NONE                   █ 48
-CLEAR                  █ 31
-BILL OF SALE           █ 14
-REPAIRABLE             █ 2
+SALVAGE                ████████████████████████ 417
+CLEAR                  ██ 36
+PARTSONLY              ██ 35
+NONE                   █ 17
+BILL OF SALE           █ 4
+NON-REPAIRABLE         █ 3
+REPAIRABLE             █ 1
 ```
 
 </td>
@@ -278,10 +279,9 @@ REPAIRABLE             █ 2
 **Auction**
 
 ```
-COPART_US              ████████████████████████ 1000
 IAAI_US                ████████████████████████ 1000
-COPART_CA              ███ 134
-IAAI_CA                █ 5
+COPART_US              █████████ 355
+IAAI_CA                █ 2
 ```
 
 </td>
@@ -319,7 +319,7 @@ Where the donor cars for a model sit, how often they come up and what they go fo
 
 ## 💳 Full dataset and pricing
 
-The whole catalogue — **3,915,596 lots** and growing — every field unmasked, filtered to what you need:
+The whole catalogue — **3,920,010 lots** and growing — every field unmasked, filtered to what you need:
 
 1. Open **[salvagealert.com/datasets](https://salvagealert.com/datasets?utm_source=github&utm_medium=dataset_readme)** and pick the auctions, period, makes, years and status.
 2. Watch the row count and the price update; download a **free 100-row preview** of exactly that selection.
