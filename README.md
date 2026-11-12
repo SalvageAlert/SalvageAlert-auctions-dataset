@@ -9,14 +9,14 @@
 **The free daily sample of the [SalvageAlert](https://salvagealert.com/?utm_source=github&utm_medium=dataset_readme) salvage auction dataset.**
 
 Every Copart and IAA lot in the US and Canada — vehicle, damage, title, sale date, yard and the bids it made — in one schema
-across four auctions. A fresh slice lands here every day; the full 3.98M-lot history is one click away.
+across four auctions. A fresh slice lands here every day; the full 4M-lot history is one click away.
 
 <br>
 
-[![records](https://img.shields.io/badge/records-3%2C975%2C767-ea580c?style=for-the-badge)](https://salvagealert.com/datasets?utm_source=github&utm_medium=dataset_readme)
+[![records](https://img.shields.io/badge/records-4%2C002%2C164-ea580c?style=for-the-badge)](https://salvagealert.com/datasets?utm_source=github&utm_medium=dataset_readme)
 [![auctions](https://img.shields.io/badge/auctions-Copart%20%C2%B7%20IAA%20%C2%B7%20US%20%C2%B7%20CA-0b1a33?style=for-the-badge)](#-coverage)
 [![fields](https://img.shields.io/badge/fields-47-2563eb?style=for-the-badge)](#-fields)
-[![updated](https://img.shields.io/badge/updated-2026--11--10-22c55e?style=for-the-badge)](data)
+[![updated](https://img.shields.io/badge/updated-2026--11--11-22c55e?style=for-the-badge)](data)
 [![sample](https://img.shields.io/badge/sample-CC%20BY--NC%204.0-64748b?style=for-the-badge)](LICENSE)
 
 <br>
@@ -61,13 +61,13 @@ Copart USA, Copart Canada, IAA USA and IAA Canada in the same 47 columns. A Copa
 <td width="33%" valign="top">
 
 ### Outcomes, not just listings
-**3,686,234** lots that already sold or ended, with the last bid, the retail value and the repair estimate the auction published.
+**3,685,421** lots that already sold or ended, with the last bid, the retail value and the repair estimate the auction published.
 
 </td>
 <td width="33%" valign="top">
 
 ### Full VINs
-**3,179,567** lots carry the complete, unmasked VIN — the key to joining history, recalls and your own records.
+**3,192,285** lots carry the complete, unmasked VIN — the key to joining history, recalls and your own records.
 
 </td>
 </tr>
@@ -100,8 +100,8 @@ From **$0.50 per 1,000 rows**, cheaper as the file grows, paid once. A free 100-
 **1. Grab a day straight from GitHub**
 
 ```bash
-curl -O https://raw.githubusercontent.com/SalvageAlert/SalvageAlert-auctions-dataset/main/data/copart_us/2026-11-10.csv
-curl -O https://raw.githubusercontent.com/SalvageAlert/SalvageAlert-auctions-dataset/main/data/iaai_us/2026-11-10.csv
+curl -O https://raw.githubusercontent.com/SalvageAlert/SalvageAlert-auctions-dataset/main/data/copart_us/2026-11-11.csv
+curl -O https://raw.githubusercontent.com/SalvageAlert/SalvageAlert-auctions-dataset/main/data/iaai_us/2026-11-11.csv
 ```
 
 **2. Load everything in this repository**
@@ -131,13 +131,13 @@ What SalvageAlert holds today — every row of it available in the [full dataset
 
 | Auction | `source` | Lots | Sold or ended | Full VIN | Recorded since | Days here |
 |---|---|---:|---:|---:|---|---:|
-| Copart USA | `copart_us` | 2,983,137 | 2,846,825 | 2,971,273 | 2025-11-21 | 17 |
-| Copart Canada | `copart_ca` | 79,125 | 76,582 | 78,717 | 2025-11-21 | 14 |
-| IAA USA | `iaai_us` | 768,929 | 622,193 | 0 | 2026-06-04 | 17 |
-| IAA Canada | `iaai_ca` | 144,576 | 140,634 | 129,577 | 2026-05-27 | 17 |
-| **All four** | | **3,975,767** | **3,686,234** | **3,179,567** | | |
+| Copart USA | `copart_us` | 2,994,700 | 2,855,796 | 2,982,786 | 2025-11-21 | 18 |
+| Copart Canada | `copart_ca` | 79,340 | 76,655 | 78,931 | 2025-11-21 | 15 |
+| IAA USA | `iaai_us` | 782,637 | 612,511 | 0 | 2026-06-04 | 18 |
+| IAA Canada | `iaai_ca` | 145,487 | 140,459 | 130,568 | 2026-05-27 | 18 |
+| **All four** | | **4,002,164** | **3,685,421** | **3,192,285** | | |
 
-<sub>IAA USA publishes masked VINs only; Copart publishes them in full. Counts are as of 2026-11-10.</sub>
+<sub>IAA USA publishes masked VINs only; Copart publishes them in full. Counts are as of 2026-11-11.</sub>
 
 <br>
 
@@ -145,14 +145,14 @@ What SalvageAlert holds today — every row of it available in the [full dataset
 
 ```
 data/
-├── copart_us/2026-11-10.csv    one file per auction per day:
-├── copart_ca/2026-11-10.csv    the lots whose sale fell on that day,
-├── iaai_us/2026-11-10.csv      up to 1,000 rows each
-└── iaai_ca/2026-11-10.csv
+├── copart_us/2026-11-11.csv    one file per auction per day:
+├── copart_ca/2026-11-11.csv    the lots whose sale fell on that day,
+├── iaai_us/2026-11-11.csv      up to 1,000 rows each
+└── iaai_ca/2026-11-11.csv
 schema/fields.json          the schema, machine-readable
 ```
 
-- **Today:** Copart USA **1,000** · Copart Canada **1,000** · IAA USA **1,000** · IAA Canada **1,000** — 4,000 rows.
+- **Today:** Copart USA **1,000** · Copart Canada **548** · IAA USA **1,000** · IAA Canada **66** — 2,614 rows.
 - **Retention:** the last 30 days. Older days live on in the [full dataset](https://salvagealert.com/datasets?utm_source=github&utm_medium=dataset_readme).
 - **Masking:** fields marked 🔒 read `[PREMIUM]`; the VIN keeps its first 11 characters (maker, model, year, plant) and masks the serial. Every paid file carries all of them.
 
@@ -230,14 +230,14 @@ schema/fields.json          the schema, machine-readable
 **Top makes**
 
 ```
-TOYOTA                 ████████████████████████ 419
-HONDA                  ███████████████████████ 397
-FORD                   ██████████████████████ 392
-CHEVROLET              ████████████████████ 346
-HYUNDAI                ████████████████ 274
-NISSAN                 ███████████████ 260
-KIA                    █████████ 152
-VOLKSWAGEN             ████████ 133
+FORD                   ████████████████████████ 298
+CHEVROLET              █████████████████████ 262
+TOYOTA                 ███████████████████ 238
+NISSAN                 ████████████████ 201
+HONDA                  ██████████████ 179
+KIA                    ███████████ 132
+HYUNDAI                ██████████ 127
+JEEP                   ████████ 98
 ```
 
 </td>
@@ -246,14 +246,14 @@ VOLKSWAGEN             ████████ 133
 **Primary damage**
 
 ```
-FRONT END              ████████████████████████ 1204
-FRONT                  █████████ 475
-SIDE                   █████ 255
-REAR END               █████ 251
-REAR                   ████ 188
-HAIL                   ███ 131
-LEFT SIDE              ███ 131
-RIGHT SIDE             ██ 125
+FRONT END              ████████████████████████ 1033
+SIDE                   ████ 184
+REAR END               ████ 175
+MINOR DENT/SCRATCHES   ███ 149
+NORMAL WEAR & TEAR     ██ 81
+RIGHT SIDE             ██ 80
+HAIL                   ██ 74
+NORMAL WEAR            ██ 74
 ```
 
 </td>
@@ -264,14 +264,14 @@ RIGHT SIDE             ██ 125
 **Title**
 
 ```
-SALVAGE                ████████████████████████ 2328
-REPAIRABLE             ██████ 580
-NONE                   ██████ 545
-CLEAR                  ██ 228
-PARTSONLY              █ 137
-NON-REPAIRABLE         █ 113
-BILL OF SALE           █ 44
-NL-NOT-BRANDED         █ 10
+SALVAGE                ████████████████████████ 1945
+CLEAR                  ███ 237
+NONE                   ██ 173
+NON-REPAIRABLE         █ 74
+BILL OF SALE           █ 59
+PARTSONLY              █ 49
+REPAIRABLE             █ 24
+NO OWNERSHIP           █ 3
 ```
 
 </td>
@@ -281,9 +281,9 @@ NL-NOT-BRANDED         █ 10
 
 ```
 COPART_US              ████████████████████████ 1000
-COPART_CA              ████████████████████████ 1000
 IAAI_US                ████████████████████████ 1000
-IAAI_CA                ████████████████████████ 1000
+COPART_CA              █████████████ 548
+IAAI_CA                ██ 66
 ```
 
 </td>
@@ -321,7 +321,7 @@ Where the donor cars for a model sit, how often they come up and what they go fo
 
 ## 💳 Full dataset and pricing
 
-The whole catalogue — **3,975,767 lots** and growing — every field unmasked, filtered to what you need:
+The whole catalogue — **4,002,164 lots** and growing — every field unmasked, filtered to what you need:
 
 1. Open **[salvagealert.com/datasets](https://salvagealert.com/datasets?utm_source=github&utm_medium=dataset_readme)** and pick the auctions, period, makes, years and status.
 2. Watch the row count and the price update; download a **free 100-row preview** of exactly that selection.
