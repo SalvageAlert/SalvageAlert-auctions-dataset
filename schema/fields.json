@@ -4,7 +4,12 @@
     "copart_us",
     "copart_ca",
     "iaai_us",
-    "iaai_ca"
+    "iaai_ca",
+    "copart_uk",
+    "iaai_uk",
+    "copart_de",
+    "japan",
+    "korea"
   ],
   "premiumPlaceholder": "[PREMIUM]",
   "fields": [
@@ -18,25 +23,25 @@
       "name": "source",
       "type": "string",
       "premium": false,
-      "description": "copart_us, copart_ca, iaai_us or iaai_ca."
+      "description": "copart_us, copart_ca, copart_uk, copart_de, iaai_us, iaai_ca, iaai_uk, japan or korea."
     },
     {
       "name": "auction",
       "type": "string",
       "premium": false,
-      "description": "Copart or IAA."
+      "description": "Copart, IAA, Japan auctions, Encar (Korean dealers) or Korea auctions."
     },
     {
       "name": "country",
       "type": "string",
       "premium": false,
-      "description": "US or CA."
+      "description": "US, CA, GB, DE, JP or KR."
     },
     {
       "name": "lotNumber",
       "type": "string",
       "premium": false,
-      "description": "The auction's lot (Copart) or stock (IAA) number."
+      "description": "The auction's lot (Copart) or stock (IAA) number; for Japan / Korea our lot key."
     },
     {
       "name": "vin",
@@ -121,6 +126,24 @@
       "type": "string",
       "premium": false,
       "description": "Drive train."
+    },
+    {
+      "name": "boatType",
+      "type": "string",
+      "premium": false,
+      "description": "Boats only (boat.vin): boat or pwc (jet ski); empty for cars."
+    },
+    {
+      "name": "hullType",
+      "type": "string",
+      "premium": false,
+      "description": "Boats only: the kind of hull the listing reads as (pontoon, bass, bowrider…)."
+    },
+    {
+      "name": "lengthFt",
+      "type": "number",
+      "premium": false,
+      "description": "Boats only: length in feet, from the listing."
     },
     {
       "name": "odometer",
@@ -228,7 +251,7 @@
       "name": "currency",
       "type": "string",
       "premium": false,
-      "description": "USD or CAD — the currency of every price in the row."
+      "description": "USD, CAD, GBP, EUR, JPY or KRW — the currency of every price in the row."
     },
     {
       "name": "sellerName",
